@@ -1,10 +1,15 @@
 <?php
   class Pages extends Controller {
     public function __construct(){
-     
+      
     }
     
     public function index(){
+      
+      if(isLoggedIn()) {
+        redirect('posts/index');
+      }
+
       $data = [
         'title' => 'SharePosts',
         'description' => 'Simple social network built on PHP MVC Framework'

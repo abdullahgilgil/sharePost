@@ -1,4 +1,10 @@
 <?php
+
+  // Time and error settings
+  date_default_timezone_set("Europe/London");
+  error_reporting(E_ALL);
+  ini_set('display_errors', "on");
+
   // DB Params
   define('DB_HOST', 'localhost');
   define('DB_USER', 'root');
@@ -8,7 +14,7 @@
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
   // URL Root
-  define('URLROOT', 'http://localhost:8080/sharePost');
+  define('URLROOT', 'http://localhost/sharePost');
   // Site Name
   define('SITENAME', 'SharePosts');
   // App Version
