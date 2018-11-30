@@ -14,7 +14,7 @@
    <div class="row">
       <div class="card card-body mb-3">
          <h4 class="card-title">
-            Post Title
+            <?php echo $post -> post_title; ?>
          </h4>
          <div class="bg-light p-2 mb-3">
             Written by <?php echo ucwords($post -> user_name); ?> on <?php echo $post -> post_created_at; ?>
