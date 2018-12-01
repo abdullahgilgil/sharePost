@@ -44,24 +44,33 @@
       } // Register user
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      // Login user
-      public function login($email, $password){
+   // Login user
+   public function login($email, $password){
 
-         $this -> db -> query('SELECT * FROM users WHERE user_email = :user_email');
-         $this -> db -> bind(':user_email', $email);
+      $this -> db -> query('SELECT * FROM users WHERE user_email = :user_email');
+      $this -> db -> bind(':user_email', $email);
 
-         $row = $this -> db ->single();
-         $hashed_password = $row->user_password;
+      $row = $this -> db ->single();
+      $hashed_password = $row->user_password;
 
-         if(password_verify($password, $hashed_password)){
-            return $row;
-         } else {
-            return false;
-         }
+      if(password_verify($password, $hashed_password)){
+         return $row;
+      } else {
+         return false;
+      }
 
-      } // Login user
+   } // Login user
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+   // getPostById
+   public function getUserById ($id){
+      $this -> db -> query("SELECT * FROM users WHERE user_id = :user_id");
+      $this -> db -> bind(':user_id', $id);
+      $row = $this -> db -> single();
+      return $row;
+   } // getPostById
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////// 
 
    } // User

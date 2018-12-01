@@ -23,9 +23,9 @@
             <?php echo $post -> post_body; ?>
          </div>
          <div>
-            <a style="width: 100px;" href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->post_id; ?>" class="btn btn-warning mt-5">Read More</a>
+            <a style="width: 100px;" href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->post_id; ?>" class="btn btn-warning mt-5 pull-right">Read More</a>
             <!-- <span style="color:red; margin-bottom:100px;" class="px-3"><i class="fa fa-heart fa-2x"></i></span> -->
-            <a style="width: 100px;" href="" class="btn btn-dark mt-5 pull-right">Comment</a>
+            <!-- <a style="width: 100px;" href="" class="btn btn-dark mt-5 pull-right">Comment</a> -->
          </div>
       </div>
    
@@ -33,4 +33,4 @@
    </div>
    <?php } ?>
 
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/views/inc/footer.php'; ?>
